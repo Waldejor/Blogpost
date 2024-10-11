@@ -1,0 +1,30 @@
+<%- include("./partials/header.ejs") %><!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/work.css">
+    <title>Working with blog</title>
+</head>
+<body>
+  <h1>Welcome <%= user %> Select from blogs to work with from below.</h1>
+
+  <ul class="stories">
+      <li><a href="/edit?query=My scary experience">My scary experience</a></li>
+      <li><a href="/edit?query=Learn how to don't say yes when you mean no">Learn how to don't say yes when you mean no</a></li>
+    
+  </ul>
+
+    <form action="/submit" method="POST" >
+    <input type="submit" class="logout" value="log out">
+    <input type="submit" value="Create new">
+
+  </form>
+
+  
+    
+</body>
+
+
+</html>

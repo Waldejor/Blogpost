@@ -1,0 +1,29 @@
+<%- include("./partials/header.ejs") %><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your blog</title>
+</head>
+<body>
+  <h1>Welcome to the blog handler!</h1>
+
+  
+  
+    <% if (locals.auth) { 
+        if (auth) { %>
+          <p1>You are free to handle your blog post</p1>
+        <% } }%>
+
+    
+   
+  <form action="/submit" method="POST">
+    <label for="user">User name:   </label>
+    <input id="na" type="text" name="user" placeholder="Enter user or email!" required>
+    <label for="password">Password:   </label>
+    <input id="pw" type="password" name="password" placeholder="Enter password!" required>
+    <input type="submit" value="Search blog account.">
+  </form>
+    
+</body>
+</html>

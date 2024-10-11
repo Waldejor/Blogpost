@@ -1,0 +1,32 @@
+<%- include("./partials/header.ejs") %><!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/edit.css">
+    <title>Edit your blog</title>
+</head>
+<body>
+  <h1>Please edit your blog post <%= blogItem %></h1>
+
+<textarea name="blog" id="blog"></textarea>
+  
+<form action="/handle" method="POST" >
+  <input type="submit" class="Save" name="save" value="Save">
+  <input type="submit" class="Remove" name="remove" value="Remove">
+  <input type="submit" class="Publish" name="publish" value="Publish">
+
+<% if (locals.blogTask &&  (blogTask != "noaction")) { %>
+  <p>The document has been <%= blogTask%></p>
+<% } else {%>
+  <p>Document is ready</p>
+<%}%>
+
+ 
+   
+
+</body>
+
+
+</html>

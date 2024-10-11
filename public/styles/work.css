@@ -1,0 +1,10 @@
+.stories{
+    color:blue;
+    list-style: none;
+}
+
+.logout{
+    margin-left: 200px;
+    color: blue;
+    background-color: azure;
+}
